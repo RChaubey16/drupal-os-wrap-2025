@@ -243,7 +243,7 @@ const StoryPlayer: React.FC<StoryPlayerProps> = ({ data, onExit }) => {
                   transition={{ delay: 0.4, duration: 0.5 }}
                   className="text-2xl md:text-3xl font-bold text-white font-display leading-tight max-w-[280px]"
                 >
-                  YOU DIDN'T JUST USE DRUPALLL.
+                  YOU DIDN'T JUST USE DRUPAL.
                   <br />
                   YOU SHAPED IT
                 </motion.h2>
