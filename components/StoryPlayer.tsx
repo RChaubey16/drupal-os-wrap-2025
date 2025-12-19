@@ -1251,16 +1251,16 @@ const StoryPlayer: React.FC<StoryPlayerProps> = ({ data, onExit }) => {
 
   const handleCopyLink = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const match = window.location.href.match(/\/user\/([^/]+)/);
-    console.log(`MATCH`, match)
 
-    if (match == null) {
-      navigator.clipboard.writeText(
-        window.location.href + `user/${data.username}`
-      );
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-    }
+    const origin = window.location.origin;
+    const userPath = `/user/${data.username}`;
+
+    const url = window.location.pathname.startsWith("/user/")
+      ? window.location.href
+      : `${origin}${userPath}`;
+
+    navigator.clipboard.writeText(url);
+
     setLinkCopied(true);
     setTimeout(() => setLinkCopied(false), 2000);
   };
