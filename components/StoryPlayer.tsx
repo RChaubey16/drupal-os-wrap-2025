@@ -485,7 +485,7 @@ const StoryPlayer: React.FC<StoryPlayerProps> = ({ data, onExit }) => {
                                 </div>
                               ) : (
                                 <div className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-200 border border-blue-500/30 uppercase tracking-wider flex items-center gap-1">
-                                  <Users className="w-3 h-3" /> Volunteer
+                                  <Users className="w-3 h-3" />
                                 </div>
                               )}
                               <span className="text-[10px] text-gray-400 uppercase tracking-widest">
@@ -973,7 +973,7 @@ const StoryPlayer: React.FC<StoryPlayerProps> = ({ data, onExit }) => {
           !showTotal && !showCoreAI && !showMentorship && !showRoles;
 
         return (
-          <div className="flex flex-col items-center h-full w-full relative z-10 bg-[#0a0a0a]">
+          <div className="flex flex-col items-center h-full w-full relative overflow-auto z-10 bg-[#0a0a0a]">
             <SlideBackground />
             <div className="relative z-10 flex flex-col items-center justify-between h-full w-full py-8 px-4 md:px-6">
               <SlideHeader
